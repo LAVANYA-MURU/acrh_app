@@ -1,17 +1,25 @@
 pluginManagement {
     repositories {
-        google {
-            content {
-                includeGroupByRegex("com\\.android.*")
-                includeGroupByRegex("com\\.google.*")
-                includeGroupByRegex("androidx.*")
-            }
-        }
-        mavenCentral()
         gradlePluginPortal()
+        google()
+        mavenCentral()
     }
 }
 
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+    }
+    }
 
-rootProject.name = "acrh"
+    versionCatalogs {
+        create("libs") {
+            from(files("gradle/libs.versions.toml")) // Ensure this file exists
+        }
+    }
+}
+
+rootProject.name = "AthleteCentricRecoveryHub"
 include(":app")
