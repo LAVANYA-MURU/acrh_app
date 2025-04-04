@@ -49,6 +49,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
 
+    <Switch
+        android:id="@+id/switch_voice_commands"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enable Voice Commands"
+        app:layout_constraintTop_toBottomOf="@id/text_settings_title"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="16dp"/>
+
     <Button
         android:id="@+id/button_save_settings"
         android:layout_width="wrap_content"
