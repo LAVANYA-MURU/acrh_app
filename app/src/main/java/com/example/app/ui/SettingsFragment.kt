@@ -55,6 +55,21 @@ class SettingsFragment : Fragment() {
             override fun onNothingSelected(parent: AdapterView<*>?) {}
         }
 
+        override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+    super.onViewCreated(view, savedInstanceState)
+
+    val voiceSwitch: Switch = view.findViewById(R.id.switch_voice_commands)
+    val notificationSwitch: Switch = view.findViewById(R.id.switch_notifications)
+
+    voiceSwitch.setOnCheckedChangeListener { _, isChecked ->
+        Toast.makeText(requireContext(), "Voice Commands: ${if (isChecked) "Enabled" else "Disabled"}", Toast.LENGTH_SHORT).show()
+    }
+
+    notificationSwitch.setOnCheckedChangeListener { _, isChecked ->
+        Toast.makeText(requireContext(), "Notifications: ${if (isChecked) "Enabled" else "Disabled"}", Toast.LENGTH_SHORT).show()
+    }
+}
+
         // Handle Save button click
         buttonSaveSettings.setOnClickListener {
             val selectedDifficulty = spinnerDifficulty.selectedItem.toString()
