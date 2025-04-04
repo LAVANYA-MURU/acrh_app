@@ -45,4 +45,10 @@
     android:name="com.example.yourapp.ui.ProgressFragment"
     android:label="Progress" />
 
+    <fragment
+    android:id="@+id/aboutFragment"
+    android:name="com.example.app.ui.AboutFragment"
+    android:label="About">
+</fragment>
+
 </navigation>
