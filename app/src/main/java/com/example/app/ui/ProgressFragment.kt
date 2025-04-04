@@ -14,4 +14,15 @@ class ProgressFragment : Fragment() {
     ): View? {
         return inflater.inflate(R.layout.fragment_progress, container, false)
     }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+    super.onViewCreated(view, savedInstanceState)
+
+    val sessionButton: Button = view.findViewById(R.id.button_view_sessions)
+
+    sessionButton.setOnClickListener {
+        Toast.makeText(requireContext(), "Session History Coming Soon!", Toast.LENGTH_SHORT).show()
+    }
+}
+
 }
