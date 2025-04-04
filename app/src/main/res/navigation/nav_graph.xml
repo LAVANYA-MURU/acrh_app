@@ -39,4 +39,10 @@
         app:navGraph="@navigation/nav_graph"
         android:label="Settings"
         tools:layout="@layout/fragment_settings" />
+
+    <fragment
+    android:id="@+id/progressFragment"
+    android:name="com.example.yourapp.ui.ProgressFragment"
+    android:label="Progress" />
+
 </navigation>
