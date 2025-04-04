@@ -29,6 +29,9 @@ class HomeFragment : Fragment() {
             toolbar.setNavigationIcon(R.drawable.ic_back_arrow)
             toolbar.setNavigationOnClickListener {
                 requireActivity().onBackPressedDispatcher.onBackPressed()
+        button_view_progress.setOnClickListener {
+    findNavController().navigate(R.id.action_homeFragment_to_progressFragment)
+}
         }
     }
 
