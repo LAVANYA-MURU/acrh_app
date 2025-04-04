@@ -6,17 +6,20 @@
 
     <fragment
         android:id="@+id/homeFragment"
-        app:navGraph="@navigation/nav_graph"
+        android:name="com.example.app.ui.HomeFragment"
         android:label="Home"
         tools:layout="@layout/fragment_home">
         <action
             android:id="@+id/action_homeFragment_to_exerciseFragment"
             app:destination="@id/exerciseFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_progressFragment"
+            app:destination="@id/progressFragment" />
     </fragment>
 
     <fragment
         android:id="@+id/exerciseFragment"
-        app:navGraph="@navigation/nav_graph"
+        android:name="com.example.app.ui.ExerciseFragment"
         android:label="Exercise"
         tools:layout="@layout/fragment_exercise">
         <action
@@ -26,7 +29,7 @@
 
     <fragment
         android:id="@+id/progressFragment"
-        app:navGraph="@navigation/nav_graph"
+        android:name="com.example.yourapp.ui.ProgressFragment"
         android:label="Progress"
         tools:layout="@layout/fragment_progress">
         <action
@@ -36,19 +39,13 @@
 
     <fragment
         android:id="@+id/settingsFragment"
-        app:navGraph="@navigation/nav_graph"
+        android:name="com.example.app.ui.SettingsFragment"
         android:label="Settings"
         tools:layout="@layout/fragment_settings" />
 
     <fragment
-    android:id="@+id/progressFragment"
-    android:name="com.example.yourapp.ui.ProgressFragment"
-    android:label="Progress" />
-
-    <fragment
-    android:id="@+id/aboutFragment"
-    android:name="com.example.app.ui.AboutFragment"
-    android:label="About">
-</fragment>
-
+        android:id="@+id/aboutFragment"
+        android:name="com.example.app.ui.AboutFragment"
+        android:label="About"
+        tools:layout="@layout/fragment_about" />
 </navigation>
